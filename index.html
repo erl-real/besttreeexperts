@@ -1,0 +1,853 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Tree Experts | Premium Tree Care & Land Management | TX</title>
+<meta name="description" content="Best Tree Experts — premium tree care & land management in Texas. Tree removal, stump grinding, land clearing, 24/7 emergency. Heavy-duty equipment, certified arborist support. Free estimates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; }
+
+:root {
+  --green: #1a4d2e;
+  --green-light: #2d7a46;
+  --green-dark: #0f2e1a;
+  --brown: #5c3d2e;
+  --accent: #7cb342;
+  --accent-light: #a8d676;
+  --warm: #f5f2eb;
+  --white: #ffffff;
+  --dark: #1a1a1a;
+  --bg: #fafaf5;
+  --text: #1a1a1a;
+  --text-secondary: #555;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 40px rgba(0,0,0,0.14);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --green-dark: #4a7a5a;
+  --warm: #1e1e1e;
+  --white: #1a1a1a;
+  --dark: #e0e0e0;
+  --bg: #121212;
+  --text: #e0e0e0;
+  --text-secondary: #999;
+  --shadow: 0 4px 24px rgba(0,0,0,0.4);
+  --shadow-hover: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+/* ===== FALLING LEAVES ===== */
+#leaves { position: fixed; inset: 0; pointer-events: none; z-index: 9999; overflow: hidden; }
+#leaves i { position: absolute; top: -60px; border-radius: 5% 40% 70%; opacity: 0.12; animation: falling 8s linear infinite; }
+#leaves i:nth-of-type(2n) { animation: falling2 10s linear infinite; }
+#leaves i:nth-of-type(3n) { animation: falling3 9s linear infinite; }
+#leaves i:nth-of-type(n) { height: 23px; width: 30px; background: linear-gradient(to bottom right, #309900, #005600); }
+#leaves i:nth-of-type(2n+1) { height: 16px; width: 22px; background: linear-gradient(to bottom right, #5e9900, #2b5600); }
+#leaves i:nth-of-type(3n+2) { height: 18px; width: 26px; background: linear-gradient(to bottom right, #998a00, #564500); }
+#leaves i:nth-of-type(1) { left: 5%; animation-delay: 0s; } #leaves i:nth-of-type(2) { left: 15%; animation-delay: 1.2s; }
+#leaves i:nth-of-type(3) { left: 25%; animation-delay: 2.5s; } #leaves i:nth-of-type(4) { left: 35%; animation-delay: 0.8s; }
+#leaves i:nth-of-type(5) { left: 45%; animation-delay: 3.2s; } #leaves i:nth-of-type(6) { left: 55%; animation-delay: 1.8s; }
+#leaves i:nth-of-type(7) { left: 65%; animation-delay: 4.1s; } #leaves i:nth-of-type(8) { left: 75%; animation-delay: 0.5s; }
+#leaves i:nth-of-type(9) { left: 85%; animation-delay: 2.9s; } #leaves i:nth-of-type(10) { left: 92%; animation-delay: 3.7s; }
+@keyframes falling { 0% { transform: translate3d(0,0,0) rotate(0deg); } 100% { transform: translate3d(-150px, 100vh, 0) rotate(90deg); opacity: 0; } }
+@keyframes falling2 { 0% { transform: translate3d(0,0,0) rotate(90deg); } 100% { transform: translate3d(-200px, 100vh, 0) rotate(0deg); opacity: 0; } }
+@keyframes falling3 { 0% { transform: translate3d(0,0,0) rotate(-20deg); } 100% { transform: translate3d(-120px, 100vh, 0) rotate(-70deg); opacity: 0; } }
+
+/* ===== SOCIAL ICONS ===== */
+.social-links { display: flex; gap: 12px; align-items: center; }
+.social-link { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); color: var(--white); transition: var(--transition); }
+.social-link:hover { background: var(--accent) !important; color: var(--white) !important; transform: translateY(-2px); }
+.social-link svg { width: 18px; height: 18px; fill: currentColor; }
+.header.scrolled .social-link { background: rgba(0,0,0,0.06); color: var(--dark); }
+.contact-socials .social-link { background: var(--green); color: var(--white); width: 48px; height: 48px; }
+.contact-socials .social-link svg { width: 22px; height: 22px; }
+.theme-toggle { background: none; border: none; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); transition: var(--transition); font-size: 1.1rem; padding: 0; flex-shrink: 0; }
+.header.scrolled .theme-toggle { color: var(--dark); }
+.theme-toggle:hover { background: rgba(255,255,255,0.1); }
+.header.scrolled .theme-toggle:hover { background: rgba(0,0,0,0.06); }
+[data-theme="dark"] .theme-toggle .light-icon { display: none; }
+[data-theme="dark"] .theme-toggle .dark-icon { display: inline; }
+.theme-toggle .dark-icon { display: none; }
+.theme-toggle .light-icon { display: inline; }
+
+/* ===== HEADER ===== */
+.header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 14px 0; transition: var(--transition); }
+.header.scrolled { background: var(--white); box-shadow: var(--shadow); padding: 8px 0; }
+.header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.header-logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-logo img { height: 44px; width: auto; border-radius: 6px; }
+.header-logo span { font-weight: 700; font-size: 1.1rem; color: var(--white); transition: var(--transition); white-space: nowrap; }
+.header.scrolled .header-logo span { color: var(--green); }
+.header-right { display: flex; align-items: center; gap: 16px; }
+.header-phone { display: flex; align-items: center; gap: 6px; color: var(--white); font-weight: 600; font-size: 1rem; transition: var(--transition); white-space: nowrap; }
+.header.scrolled .header-phone { color: var(--green); }
+.header-phone:hover { color: var(--accent) !important; }
+.nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 6px; }
+.nav-toggle span { width: 24px; height: 2.5px; background: var(--white); border-radius: 2px; transition: var(--transition); }
+.header.scrolled .nav-toggle span { background: var(--dark); }
+.nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.9); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; white-space: nowrap; }
+.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--accent); transition: var(--transition); }
+.nav-links a:hover::after { width: 100%; }
+.header.scrolled .nav-links a { color: #000; }
+[data-theme="dark"] .header.scrolled .nav-links a { color: #e0e0e0; }
+.header.scrolled .nav-links a:hover { color: var(--green); }
+
+/* ===== HERO ===== */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: url('files/bg.jpg') center/cover no-repeat; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,46,26,0.88) 0%, rgba(26,77,46,0.65) 50%, rgba(0,0,0,0.45) 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; padding: 120px 24px 80px; width: 100%; }
+.hero-badge { display: inline-block; background: rgba(124,179,66,0.2); border: 1px solid var(--accent); color: var(--accent-light); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; letter-spacing: 0.5px; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; color: var(--white); line-height: 1.1; margin-bottom: 20px; max-width: 800px; }
+.hero h1 span { color: var(--accent-light); }
+.hero p { font-size: 1.15rem; color: rgba(255,255,255,0.85); max-width: 580px; margin-bottom: 32px; line-height: 1.7; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; border-radius: 50px; font-weight: 600; font-size: 1rem; border: none; cursor: pointer; transition: var(--transition); }
+.btn-primary { background: var(--accent); color: var(--white); }
+.btn-primary:hover { background: var(--green-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,179,66,0.3); }
+.btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+.btn-outline:hover { background: var(--white); color: var(--green); border-color: var(--white); transform: translateY(-2px); }
+.hero-stats { display: flex; gap: 48px; margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.12); }
+.hero-stat h3 { font-size: 2rem; font-weight: 800; color: var(--white); }
+.hero-stat h3 span { color: var(--accent-light); }
+.hero-stat p { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 0; }
+
+/* ===== SECTIONS ===== */
+.section { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 56px; }
+.section-tag { display: inline-block; color: var(--green); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+.section-header h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--green-dark); margin-bottom: 14px; }
+.section-header h2 span { color: var(--green); }
+.section-header p { color: var(--text-secondary); font-size: 1rem; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+/* ===== EMERGENCY BANNER ===== */
+.emergency-banner { background: linear-gradient(135deg, var(--green-dark), var(--green)); padding: 40px 24px; text-align: center; }
+.emergency-banner-inner { max-width: 800px; margin: 0 auto; }
+.emergency-banner h2 { color: var(--white); font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; }
+.emergency-banner h2 span { color: var(--accent-light); }
+.emergency-banner p { color: rgba(255,255,255,0.8); font-size: 1.05rem; margin-bottom: 20px; }
+
+/* ===== SERVICES ===== */
+.services { background: var(--white); padding: 100px 24px; }
+.services-inner { max-width: 1200px; margin: 0 auto; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-card { background: var(--warm); border-radius: var(--radius); overflow: hidden; transition: var(--transition); border: 1px solid transparent; }
+.service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); border-color: var(--accent); }
+.service-card-img { height: 190px; overflow: hidden; position: relative; }
+.service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+.service-card:hover .service-card-img img { transform: scale(1.05); }
+.service-card.has-hover:hover .service-card-img .img-default { opacity: 0; transform: scale(1); }
+.service-card.has-hover .service-card-img .img-hover { position: absolute; inset: 0; opacity: 0; }
+.service-card.has-hover:hover .service-card-img .img-hover { opacity: 1; transform: scale(1.05); }
+.service-card-img h3 { position: absolute; top: 0; left: 0; right: 0; padding: 10px 16px; font-size: 1.1rem; font-weight: 700; color: #fff; margin: 0; z-index: 2; text-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+.service-card-body { padding: 20px 24px 24px; background: linear-gradient(to bottom, transparent 0%, var(--warm) 24px); }
+.service-card-body p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+
+/* ===== HOW IT WORKS ===== */
+.process { background: var(--warm); padding: 100px 24px; }
+.process-inner { max-width: 1200px; margin: 0 auto; }
+.process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; counter-reset: step; }
+.process-step { text-align: center; padding: 40px 24px; background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); position: relative; counter-increment: step; }
+.process-step::before { content: counter(step); position: absolute; top: -16px; left: 50%; transform: translateX(-50%); width: 36px; height: 36px; background: var(--accent); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; }
+.process-step-icon { font-size: 2.2rem; margin-bottom: 16px; margin-top: 8px; }
+.process-step h3 { font-size: 1.1rem; font-weight: 700; color: var(--green-dark); margin-bottom: 8px; }
+.process-step p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+
+/* ===== ABOUT ===== */
+.about { padding: 100px 24px; }
+.about-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.about-image { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.about-image img { width: 100%; height: 420px; object-fit: cover; }
+.about-content h2 { font-size: 2rem; font-weight: 700; color: var(--green-dark); margin-bottom: 16px; }
+.about-content h2 span { color: var(--green); }
+[data-theme="dark"] .about-content h2 span { color: #fff; }
+.about-content p { color: var(--text-secondary); margin-bottom: 14px; line-height: 1.8; font-size: 0.95rem; }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+.about-feature { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 500; color: var(--dark); }
+.about-feature .check { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
+
+/* ===== PAGE TOGGLE ===== */
+.tab-page { display: none; }
+.tab-page.active { display: block; }
+.gallery-page { display: none; }
+.gallery-page.active { display: block; }
+.faq-page { display: none; }
+.faq-page.active { display: block; }
+.careers-page { display: none; }
+.careers-page.active { display: block; }
+.main-content.hidden { display: none; }
+
+/* ===== TAB PAGE BANNER ===== */
+.page-banner { position: relative; height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+.page-banner-bg { position: absolute; inset: 0; background: url('files/bg.jpg') center/cover no-repeat fixed; }
+.page-banner::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.55); z-index: 0; }
+.page-banner-content { position: relative; z-index: 1; color: var(--white); padding: 0 20px; }
+.page-banner-content h2 { font-size: 2.5rem; margin-bottom: 12px; }
+.page-banner-content h2 span { color: var(--accent-light); }
+.page-banner-content p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+[data-theme="dark"] .gallery-banner-overlay { background: linear-gradient(135deg, rgba(15,46,26,0.6) 0%, rgba(26,77,46,0.35) 100%); }
+.gallery-banner { position: relative; height: 260px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.gallery-banner-bg { position: absolute; inset: 0; background: url('files/bg.jpg') center/cover no-repeat; }
+.gallery-banner-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,46,26,0.85) 0%, rgba(26,77,46,0.6) 100%); }
+.gallery-banner-content { position: relative; z-index: 2; text-align: center; padding: 0 24px; }
+.gallery-banner-content h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; color: var(--white); margin-bottom: 10px; }
+.gallery-banner-content h2 span { color: var(--accent-light); }
+.gallery-banner-content p { color: rgba(255,255,255,0.8); font-size: 1rem; max-width: 500px; margin: 0 auto; }
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 10px; padding: 40px 24px 60px; max-width: 1400px; margin: 0 auto; }
+
+/* ===== GALLERY ===== */
+.gallery-item { border-radius: var(--radius); overflow: hidden; position: relative; height: 240px; cursor: pointer; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* ===== LIGHTBOX ===== */
+.lightbox { position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.92); display: none; align-items: center; justify-content: center; }
+.lightbox.open { display: flex; }
+.lightbox-img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 4px; }
+.lightbox-close { position: absolute; top: 20px; right: 24px; background: none; border: none; color: #fff; font-size: 2rem; cursor: pointer; padding: 8px; line-height: 1; opacity: 0.7; transition: var(--transition); }
+.lightbox-close:hover { opacity: 1; }
+.lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); background: none; border: none; color: #fff; font-size: 2.5rem; cursor: pointer; padding: 16px; opacity: 0.6; transition: var(--transition); line-height: 1; }
+.lightbox-prev { left: 8px; }
+.lightbox-next { right: 8px; }
+.lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
+.lightbox-counter { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+
+/* ===== SERVICE AREAS ===== */
+.areas { background: var(--warm); padding: 100px 24px; }
+.areas-inner { max-width: 1200px; margin: 0 auto; }
+.areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.area-card { background: var(--white); border-radius: var(--radius); padding: 28px 20px; text-align: center; box-shadow: var(--shadow); border: 1px solid transparent; transition: var(--transition); }
+.area-card:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+.area-card-icon { font-size: 2rem; margin-bottom: 10px; }
+.area-card h3 { font-size: 1rem; font-weight: 700; color: var(--green-dark); }
+.area-card p { font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; }
+.area-note { text-align: center; margin-top: 32px; color: var(--text-secondary); font-size: 0.9rem; }
+.area-note a { color: var(--green); font-weight: 600; text-decoration: underline; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials { background: var(--green-dark); padding: 100px 24px; }
+[data-theme="dark"] .testimonials { background: #1a3a2a; }
+.testimonials-inner { max-width: 1200px; margin: 0 auto; }
+.testimonials .section-tag { color: var(--accent-light); }
+.testimonials .section-header h2 { color: #fff; }
+.testimonials .section-header h2 span { color: var(--accent-light); }
+.testimonials .section-header p { color: rgba(255,255,255,0.6); }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.testimonial-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 28px; transition: var(--transition); }
+.testimonial-card:hover { background: rgba(255,255,255,0.1); transform: translateY(-4px); }
+.testimonial-stars { color: #f5a623; font-size: 1rem; margin-bottom: 14px; letter-spacing: 2px; }
+.testimonial-card blockquote { color: rgba(255,255,255,0.85); font-style: italic; line-height: 1.7; font-size: 0.92rem; margin-bottom: 18px; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+.testimonial-info strong { display: block; color: var(--white); font-size: 0.9rem; }
+.testimonial-info span { color: rgba(255,255,255,0.5); font-size: 0.78rem; }
+
+/* ===== JOIN OUR TEAM ===== */
+.careers { padding: 100px 24px; }
+.careers-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.careers-content h2 { font-size: 2rem; font-weight: 700; color: var(--green-dark); margin-bottom: 16px; }
+.careers-content h2 span { color: var(--green); }
+.careers-content p { color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem; margin-bottom: 12px; }
+.careers-perks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+.careers-perk { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; font-weight: 500; }
+.careers-perk .check { color: var(--accent); font-weight: 800; }
+.careers-form { background: var(--warm); padding: 36px; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+/* ===== FAQ ===== */
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+.faq-item { background: var(--white); border: 1px solid #e8e4dd; border-radius: var(--radius); overflow: hidden; }
+.faq-item.active { border-color: var(--accent); box-shadow: 0 4px 16px rgba(124,179,66,0.1); }
+.faq-question { width: 100%; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; font-size: 0.95rem; font-weight: 600; color: var(--dark); text-align: left; font-family: inherit; }
+.faq-question .icon { font-size: 1.3rem; color: var(--green); transition: var(--transition); font-weight: 300; }
+.faq-item.active .faq-question .icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.faq-answer-inner { padding: 0 22px 18px; color: var(--text-secondary); line-height: 1.7; font-size: 0.92rem; }
+
+/* ===== CONTACT ===== */
+.contact { background: var(--warm); padding: 100px 24px; }
+.contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.contact-info h3 { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); margin-bottom: 14px; }
+.contact-info p { color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem; margin-bottom: 28px; }
+.contact-detail { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.contact-detail-icon { width: 44px; height: 44px; background: var(--green); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.1rem; flex-shrink: 0; }
+.contact-detail strong { display: block; font-size: 0.9rem; color: var(--dark); }
+.contact-detail span { font-size: 0.88rem; color: var(--text-secondary); }
+.contact-form { background: var(--white); padding: 36px; border-radius: var(--radius); box-shadow: var(--shadow); }
+.contact-cta { background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; justify-content: center; }
+.contact-cta h3 { font-size: 1.6rem; font-weight: 700; color: var(--green-dark); }
+.contact-cta p { color: var(--text-secondary); font-size: 0.95rem; }
+.contact-cta .btn { min-width: 240px; justify-content: center; }
+.contact-cta .cta-call { font-size: 1.2rem; padding: 18px 36px; }
+.contact-cta .cta-copy { background: transparent; color: var(--green); border: 2px solid var(--green); }
+.contact-cta .cta-copy:hover { background: var(--green); color: var(--white); }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 0.85rem; font-weight: 500; color: var(--dark); margin-bottom: 5px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 15px; border: 2px solid #e8e4dd; border-radius: 8px; font-size: 0.92rem; font-family: inherit; transition: var(--transition); background: var(--warm); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(124,179,66,0.1); }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.btn-submit { background: var(--green); color: var(--white); padding: 15px 36px; border: none; border-radius: 50px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: var(--transition); width: 100%; font-family: inherit; }
+.btn-submit:hover { background: var(--green-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,77,46,0.3); }
+
+/* ===== FOOTER ===== */
+.footer { background: var(--green-dark); color: rgba(255,255,255,0.7); padding: 60px 24px 30px; }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
+.footer-brand img { height: 52px; width: auto; border-radius: 6px; margin-bottom: 14px; }
+.footer-brand p { font-size: 0.88rem; line-height: 1.7; max-width: 300px; }
+.footer h4 { color: var(--white); font-size: 0.95rem; font-weight: 600; margin-bottom: 18px; }
+.footer ul { list-style: none; }
+.footer ul li { margin-bottom: 8px; }
+.footer ul a { color: rgba(255,255,255,0.6); font-size: 0.88rem; transition: var(--transition); }
+.footer ul a:hover { color: var(--accent-light); }
+.footer-socials { max-width: 1200px; margin: 0 auto; padding: 24px 0; text-align: center; }
+.footer-socials .social-links { justify-content: center; gap: 16px; }
+.footer-socials .social-link { background: rgba(255,255,255,0.06); width: 42px; height: 42px; }
+.footer-socials .social-link svg { width: 18px; height: 18px; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .nav-links { position: fixed; top: 0; right: -100%; width: 280px; height: 100vh; background: var(--white); flex-direction: column; padding: 80px 32px 32px; gap: 18px; transition: 0.4s ease; box-shadow: -4px 0 24px rgba(0,0,0,0.1); align-items: flex-start; }
+  .nav-links.open { right: 0; }
+  .nav-links a { color: var(--dark) !important; font-size: 1rem; }
+  .nav-toggle { display: flex; }
+  .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+  .nav-toggle.active span:nth-child(2) { opacity: 0; }
+  .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+  .header-logo span { display: none; }
+  .process-steps { grid-template-columns: 1fr; gap: 24px; }
+  .about-inner { grid-template-columns: 1fr; gap: 32px; }
+  .careers-inner { grid-template-columns: 1fr; gap: 32px; }
+  .contact-inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; }
+  .about-features { grid-template-columns: 1fr; }
+  .careers-perks { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .section { padding: 60px 16px; }
+  .hero-content { padding: 100px 16px 60px; }
+  .hero h1 { font-size: 2rem; }
+  .hero p { font-size: 1rem; }
+  .hero-stats { gap: 16px; }
+  .hero-stat h3 { font-size: 1.4rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-banner { height: 200px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); padding: 24px 16px 40px; gap: 8px; }
+  .gallery-item { height: 180px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+  .contact-form { padding: 24px; }
+  .careers-form { padding: 24px; }
+  .about-image img { height: 280px; }
+  .footer-bottom { flex-direction: column; gap: 6px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div id="leaves"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="#" class="header-logo">
+      <img src="files/BTE OFFICIAL LOGO.jpg" alt="Best Tree Experts">
+      <span>Best Tree Experts</span>
+    </a>
+    <nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        
+<li><a href="#galleryPage" id="navGallery">Gallery</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#faqPage" id="navFaq">FAQ</a></li>
+<li><a href="#careersPage" id="navCareers">Join Our Team</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="light-icon">&#9788;</span><span class="dark-icon">&#9790;</span></button>
+      <div class="social-links">
+        <a href="https://www.facebook.com/besttreeexpertsllc" class="social-link" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/besttreeexpertsllc" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      </div>
+      <a href="tel:+15125551234" class="header-phone">(512) 555-1234</a>
+    </div>
+  </div>
+</header>
+
+<div class="main-content"><section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">&#9733; Premium Tree Care &amp; Land Management</div>
+    <h1>Heavy-Duty Equipment.<br><span>Certified Expertise.</span></h1>
+    <p>Tree removal, stump grinding, land clearing, and 24/7 emergency response — delivered by certified arborists with heavy-duty equipment. Your property, protected.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
+      <a href="#services" class="btn btn-outline">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><h3><span>24/7</span></h3><p>Emergency Service</p></div>
+      <div class="hero-stat"><h3><span>100%</span></h3><p>Recommend</p></div>
+      <div class="hero-stat"><h3><span>335+</span></h3><p>Facebook Followers</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="emergency-banner" id="emergency">
+  <div class="emergency-banner-inner">
+    <h2>&#9888; 24/7 <span>Emergency Tree Services</span></h2>
+    <p>Storm damage, fallen trees, hazardous limbs — we respond fast. Day or night, your property's safety comes first.</p>
+    <a href="tel:+15125551234" class="btn btn-primary">Call (512) 555-1234</a>
+  </div>
+</div>
+
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="section-header">
+      <div class="section-tag">What We Do</div>
+      <h2>Our <span>Services</span></h2>
+      <p>Residential &amp; commercial — heavy-duty equipment, certified arborist support, 24/7 emergency response.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card has-hover">
+        <div class="service-card-img"><img src="files/unnamed (7).jpg" alt="Tree Removal" class="img-default" loading="lazy"><img src="files/unnamed (1).jpg" alt="Tree Removal" class="img-hover" loading="lazy"><h3>Tree Removal</h3></div>
+        <div class="service-card-body"><p>Safe, precise removal for hazardous or unwanted trees. We protect your property throughout the process.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img src="files/unnamed (2).jpg" alt="Tree Trimming" loading="lazy"><h3>Tree Trimming &amp; Pruning</h3></div>
+        <div class="service-card-body"><p>Expert pruning to improve tree health, structure, and appearance. Promotes strong growth and safety.</p></div>
+      </div>
+      <div class="service-card has-hover">
+        <div class="service-card-img"><img src="files/unnamed (3).jpg" alt="Stump Grinding" class="img-default" loading="lazy"><img src="files/IMG-20251210-WA0100.jpg" alt="Stump Grinding" class="img-hover" loading="lazy"><h3>Stump Grinding &amp; Removal</h3></div>
+        <div class="service-card-body"><p>Eliminate unsightly stumps completely. We grind below grade so you can reclaim your yard.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img src="files/IMG-20251210-WA0083.jpg" alt="Trunk Removal" loading="lazy"><h3>Tree Trunk Removal</h3></div>
+        <div class="service-card-body"><p>Complete trunk removal and debris cleanup. We leave your property clean and ready for its next chapter.</p></div>
+      </div>
+      <div class="service-card has-hover">
+        <div class="service-card-img"><img src="files/unnamed (4).jpg" alt="Arborist Services" class="img-default" loading="lazy"><img src="files/unnamed (5).jpg" alt="Arborist Services" class="img-hover" loading="lazy"><h3>Arborist Services</h3></div>
+        <div class="service-card-body"><p>ISA-certified arborist consultations for tree health assessment, disease diagnosis, and treatment plans.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img src="files/cabling_bracing.jpg" alt="Cabling" loading="lazy"><h3>Cabling &amp; Bracing</h3></div>
+        <div class="service-card-body"><p>Structural support systems for vulnerable trees. Prolongs life and prevents failure during storms.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img src="files/IMG-20251210-WA0094.jpg" alt="Land Clearing" loading="lazy"><h3>Land Clearing</h3></div>
+        <div class="service-card-body"><p>Heavy-duty land clearing and brush removal for residential lots, commercial sites, and rural acreage.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img src="files/treeplant.png" alt="Tree Planting" loading="lazy"><h3>Tree Planting</h3></div>
+        <div class="service-card-body"><p>Expert species selection and planting for long-term health and beauty. We plant the right tree in the right place.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-card-img"><img src="files/IMG-20251210-WA0098.jpg" alt="Transplanting" loading="lazy"><h3>Tree Transplanting</h3></div>
+        <div class="service-card-body"><p>Relocate valuable trees to better locations. Our careful process ensures high survival and minimal stress.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-inner">
+    <div class="section-header">
+      <div class="section-tag">How It Works</div>
+      <h2>Simple <span>3-Step Process</span></h2>
+      <p>From your first call to the final cleanup — we make tree care straightforward and stress-free.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step-icon">&#9742;</div>
+        <h3>Request a Free Estimate</h3>
+        <p>Call, email, or fill out our form. We'll listen to what you need and schedule a time to assess the job.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-icon">&#128196;</div>
+        <h3>Get a Clear Quote</h3>
+        <p>We inspect the trees, explain our approach, and provide a straightforward written estimate — no hidden fees.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step-icon">&#127795;</div>
+        <h3>We Handle It</h3>
+        <p>Our crew shows up on time, does the work safely and efficiently, and leaves your property cleaner than we found it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<section class="gallery-page" id="galleryPage">
+  <div class="gallery-banner">
+    <div class="gallery-banner-bg"></div>
+    <div class="gallery-banner-overlay"></div>
+    <div class="gallery-banner-content">
+      <h2>Project <span>Gallery</span></h2>
+      <p>Real projects from real properties across Texas. See the difference professional tree care makes.</p>
+    </div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="files/unnamed (8).jpg" alt="Brush clearing" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (9).jpg" alt="Tree work" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (6).jpg" alt="Rigging" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (10).jpg" alt="Stump grinding" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (3).jpg" alt="Stump removal" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed.jpg" alt="Tree cutting" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (1).jpg" alt="Tree cutting" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (11).jpg" alt="Fallen tree" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (4).jpg" alt="Tree trimming" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (12).jpg" alt="Job site" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (2).jpg" alt="Job site" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (13).jpg" alt="Job site" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (14).jpg" alt="Job site" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (15).jpg" alt="Veronda job" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (16).jpg" alt="Veronda job" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (17).jpg" alt="Veronda job" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (18).jpg" alt="Veronda job" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/unnamed (19).jpg" alt="Veronda job" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0076.jpg" alt="Tree removal" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0077.jpg" alt="Tree trimming" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0079.jpg" alt="Stump grinding" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0083.jpg" alt="Trunk removal" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0085.jpg" alt="Arborist work" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0087.jpg" alt="Cabling bracing" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0094.jpg" alt="Land clearing" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0096.jpg" alt="Tree planting" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0098.jpg" alt="Transplanting" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0100.jpg" alt="Tree work" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/IMG-20251210-WA0104.jpg" alt="Tree work" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/WhatsApp%20Image%202025-12-09%20at%2022.50.45_38e52289.jpg" alt="Job site" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/WhatsApp%20Image%202025-12-09%20at%2022.50.45_9821c161.jpg" alt="Job site" loading="lazy"></div>
+    <div class="gallery-item"><img src="files/WhatsApp%20Image%202025-12-09%20at%2022.50.45_a8db4c92.jpg" alt="Job site" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="faq-page" id="faqPage">
+  <div class="gallery-banner">
+    <div class="gallery-banner-bg"></div>
+    <div class="gallery-banner-overlay"></div>
+    <div class="gallery-banner-content">
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <p>Answers to common questions about our tree services.</p>
+    </div>
+  </div>
+  <div class="faq-list" style="padding:60px 24px;max-width:760px;margin:0 auto;">
+    <div class="faq-item"><button class="faq-question">How much does tree removal cost? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Cost depends on tree size, location, condition, and complexity. Small trees typically start around $300, while large or hard-to-access trees may cost more. We provide free, no-obligation estimates for every job.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Are you licensed and insured? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. Best Tree Experts is fully licensed, bonded, and carries comprehensive liability insurance and workers' compensation. We're happy to provide proof of insurance upon request.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Do you offer free estimates? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes! We provide free, no-pressure estimates for all services. We'll assess the job, explain our approach, and give you a clear upfront price — no hidden fees.</div></div></div>
+    <div class="faq-item"><button class="faq-question">What areas do you serve? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">We proudly serve Kerrville, Nacogdoches, the Texas Hill Country, East Texas, and surrounding communities. Contact us to see if we cover your area.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Do you handle emergency tree services? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes, we offer 24/7 emergency tree services for storm damage, fallen trees, and hazardous situations. Call us anytime — we respond fast to keep your property safe.</div></div></div>
+    <div class="faq-item"><button class="faq-question">What kind of equipment do you use? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">We operate heavy-duty equipment including bucket trucks, stump grinders, skid steers, and forestry mulchers. This allows us to handle jobs of any size efficiently and safely.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Will you clean up after the job? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Always. Full cleanup and debris removal is included with every job. We leave your property cleaner than we found it — that's our promise.</div></div></div>
+    <div class="faq-item"><button class="faq-question">Do you offer commercial services? <span class="icon">+</span></button><div class="faq-answer"><div class="faq-answer-inner">Yes. We serve both residential and commercial clients, including property managers, HOAs, construction sites, and municipalities.</div></div></div>
+  </div>
+</section>
+
+<section class="careers-page" id="careersPage">
+  <div class="gallery-banner">
+    <div class="gallery-banner-bg"></div>
+    <div class="gallery-banner-overlay"></div>
+    <div class="gallery-banner-content">
+      <h2>Join Our <span>Team</span></h2>
+      <p>Build your career with Best Tree Experts.</p>
+    </div>
+  </div>
+  <div class="careers-inner" style="padding:60px 24px;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+    <div class="careers-content">
+      <div class="section-tag">Join Our Team</div>
+      <h2>Build Your Career <span>with BTE</span></h2>
+      <p>We're looking for skilled climbers, ground crew, and equipment operators who take pride in their work. As a family-owned company, we provide a positive, supportive work environment.</p>
+      <div class="careers-perks">
+        <div class="careers-perk"><span class="check">&#10003;</span> Hands-On Training</div>
+        <div class="careers-perk"><span class="check">&#10003;</span> Paid Holidays</div>
+        <div class="careers-perk"><span class="check">&#10003;</span> Supportive Team</div>
+        <div class="careers-perk"><span class="check">&#10003;</span> Growth Opportunities</div>
+      </div>
+      <p>Call us to learn about current openings and how to apply.</p>
+    </div>
+    <div class="contact-cta">
+      <h3>Call to Apply</h3>
+      <p>Talk to a team member about current openings</p>
+      <a href="tel:+15125551234" class="btn btn-primary cta-call">&#9742; (512) 555-1234</a>
+      <button class="btn btn-outline cta-copy" id="copyDetails2">&#128203; Copy Details</button>
+    </div>
+  </div>
+</section>
+
+<div class="main-content"><section class="about section" id="about">
+  <div class="about-inner">
+    <div class="about-image"><img src="files/bg.jpg" alt="Best Tree Experts" loading="lazy"></div>
+    <div class="about-content">
+      <div class="section-tag">Who We Are</div>
+      <h2>Premium <span>Tree Care</span> &amp; Land Management</h2>
+      <p>Best Tree Experts delivers premium tree care and land management across Texas. From safe tree removal to professional pruning, trimming, and stump grinding — we protect your property with fast service and expert results.</p>
+      <p>Heavy-duty equipment, certified arborist support, and 24/7 emergency response. Every project includes full cleanup and a satisfaction guarantee.</p>
+      <div class="about-features">
+        <div class="about-feature"><span class="check">&#10003;</span> Heavy-Duty Equipment</div>
+        <div class="about-feature"><span class="check">&#10003;</span> Certified Arborist Support</div>
+        <div class="about-feature"><span class="check">&#10003;</span> Free Estimates</div>
+        <div class="about-feature"><span class="check">&#10003;</span> 24/7 Emergency Response</div>
+        <div class="about-feature"><span class="check">&#10003;</span> Licensed &amp; Insured</div>
+        <div class="about-feature"><span class="check">&#10003;</span> Full Cleanup Included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-inner">
+    <div class="section-header">
+      <div class="section-tag">Testimonials</div>
+      <h2>What Our <span>Clients Say</span></h2>
+      <p>Real feedback from real customers. <a href="https://www.youtube.com/@BestTreeExpertsLLC" target="_blank" rel="noopener" style="color:var(--accent-light);text-decoration:underline;">Watch video testimonials &#8599;</a></p>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <blockquote>"Best Tree Experts did an incredible job removing three large oaks from our property. Professional, on time, and left everything spotless. Highly recommend!"</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">M</div><div class="testimonial-info"><strong>Michael T.</strong><span>Kerrville, TX</span></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <blockquote>"We needed emergency storm cleanup after a bad windstorm. They were at our house within two hours and had the fallen tree removed before dinner. Lifesavers."</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">S</div><div class="testimonial-info"><strong>Sarah K.</strong><span>Nacogdoches, TX</span></div></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <blockquote>"The arborist consultation was thorough and educational. They diagnosed a disease in our pecan tree that two other companies missed. Tree is thriving now!"</blockquote>
+        <div class="testimonial-author"><div class="testimonial-avatar">D</div><div class="testimonial-info"><strong>David R.</strong><span>Fredericksburg, TX</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="areas-inner">
+    <div class="section-header">
+      <div class="section-tag">Where We Serve</div>
+      <h2>Our <span>Service Areas</span></h2>
+      <p>Proudly serving communities across Texas with premium tree care and land management.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>Kerrville</h3><p>Hill Country</p></div>
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>Nacogdoches</h3><p>East Texas</p></div>
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>Fredericksburg</h3><p>Hill Country</p></div>
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>Boerne</h3><p>Hill Country</p></div>
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>San Antonio</h3><p>South Texas</p></div>
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>Austin</h3><p>Central Texas</p></div>
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>Comfort</h3><p>Hill Country</p></div>
+      <div class="area-card"><div class="area-card-icon">&#127963;</div><h3>Lufkin</h3><p>East Texas</p></div>
+    </div>
+    <p class="area-note">Don't see your area? <a href="#contact">Contact us</a> — we may still cover you.</p>
+  </div>
+</section>
+
+
+
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-tag">Contact Us</div>
+      <h3>Get Your Free Estimate</h3>
+      <p>Call, email, or follow us on social media. We respond fast — day or night.</p>
+      <div class="contact-detail"><div class="contact-detail-icon">&#9742;</div><div><strong>Call Us</strong><span>(512) 555-1234</span></div></div>
+      <div class="contact-detail"><div class="contact-detail-icon">&#9993;</div><div><strong>Email Us</strong><span>besttreeexperts100@gmail.com</span></div></div>
+      <div class="contact-detail"><div class="contact-detail-icon">&#9906;</div><div><strong>Service Area</strong><span>Kerrville &bull; Nacogdoches &bull; Texas Hill Country &bull; East Texas</span></div></div>
+      <div class="contact-detail"><div class="contact-detail-icon">&#128337;</div><div><strong>Hours</strong><span>Open 24/7 &bull; Always Available for Emergencies</span></div></div>
+      <div class="contact-socials" style="display:flex;gap:12px;margin-top:24px;">
+        <a href="https://www.facebook.com/besttreeexpertsllc" class="social-link" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/besttreeexpertsllc" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://www.tiktok.com/@besttreeexperts" class="social-link" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        <a href="https://www.youtube.com/@BestTreeExpertsLLC" class="social-link" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <h3>Give Us a Call</h3>
+      <p>Free estimates &bull; 24/7 emergency service</p>
+      <a href="tel:+15125551234" class="btn btn-primary cta-call">&#9742; (512) 555-1234</a>
+      <button class="btn btn-outline cta-copy" id="copyDetails">&#128203; Copy Details</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="files/BTE OFFICIAL LOGO.jpg" alt="Best Tree Experts">
+      <p>Premium tree care &amp; land management across Texas. Heavy-duty equipment, certified arborist support, 24/7 emergency response.</p>
+    </div>
+    <div><h4>Services</h4><ul><li><a href="#services">Tree Removal</a></li><li><a href="#services">Tree Trimming</a></li><li><a href="#services">Stump Grinding</a></li><li><a href="#services">Land Clearing</a></li><li><a href="#services">Emergency Service</a></li></ul></div>
+    <div><h4>Quick Links</h4><ul><li><a href="#about">About Us</a></li><li><a href="#process">How It Works</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#testimonials">Reviews</a></li><li><a href="#careers">Careers</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>(512) 555-1234</li><li>besttreeexperts100@gmail.com</li><li>Kerrville &bull; Nacogdoches &bull; TX</li><li><a href="https://besttreeexperts.org" target="_blank" rel="noopener" style="color:var(--accent-light);">besttreeexperts.org</a></li></ul></div>
+  </div>
+  <div class="footer-socials">
+    <div class="social-links">
+      <a href="https://www.facebook.com/besttreeexpertsllc" class="social-link" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a href="https://www.instagram.com/besttreeexpertsllc" class="social-link" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+      <a href="https://www.tiktok.com/@besttreeexperts" class="social-link" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="https://www.youtube.com/@BestTreeExpertsLLC" class="social-link" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Best Tree Experts LLC. All rights reserved.</span>
+    <span>Proudly serving Texas &bull; <a href="https://besttreeexperts.org" target="_blank" rel="noopener" style="color:var(--accent-light);">besttreeexperts.org</a></span>
+  </div>
+</footer>
+</div>
+
+<script>
+(function() {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+
+document.getElementById('themeToggle').addEventListener('click', function() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+  if (!localStorage.getItem('theme')) {
+    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+  }
+});
+
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 80); });
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => { navToggle.classList.toggle('active'); navLinks.classList.toggle('open'); });
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    navToggle.classList.remove('active');
+    navLinks.classList.remove('open');
+    const tabId = this.id;
+    if (tabId === 'navGallery' || tabId === 'navFaq' || tabId === 'navCareers') {
+      e.preventDefault();
+      const pageMap = { navGallery: 'galleryPage', navFaq: 'faqPage', navCareers: 'careersPage' };
+      document.querySelectorAll('.main-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.gallery-page, .faq-page, .careers-page').forEach(el => el.classList.remove('active'));
+      document.getElementById(pageMap[tabId]).classList.add('active');
+    } else {
+      document.querySelectorAll('.main-content').forEach(el => el.classList.remove('hidden'));
+      document.querySelectorAll('.gallery-page, .faq-page, .careers-page').forEach(el => el.classList.remove('active'));
+    }
+  });
+});
+
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('active');
+    document.querySelectorAll('.faq-item.active').forEach(el => { el.classList.remove('active'); el.querySelector('.faq-answer').style.maxHeight = '0'; });
+    if (!isOpen) { item.classList.add('active'); answer.style.maxHeight = answer.scrollHeight + 'px'; }
+  });
+});
+
+function copyBizDetails(btn) {
+  const text = 'Best Tree Experts\n(512) 555-1234\nKerrville, TX | Nacogdoches, TX | besttreeexperts.org';
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.innerHTML;
+    btn.innerHTML = '&#10003; Copied!';
+    setTimeout(() => { btn.innerHTML = orig; }, 2000);
+  }).catch(() => {
+    alert('Could not copy. Our info: (512) 555-1234');
+  });
+}
+document.getElementById('copyDetails')?.addEventListener('click', function() { copyBizDetails(this); });
+document.getElementById('copyDetails2')?.addEventListener('click', function() { copyBizDetails(this); });
+</script>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <button class="lightbox-prev" id="lightboxPrev">&#8249;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+  <button class="lightbox-next" id="lightboxNext">&#8250;</button>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<script>
+(function() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  const lightboxCounter = document.getElementById('lightboxCounter');
+  const galleryImgs = document.querySelectorAll('.gallery-item img');
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    const img = galleryImgs[currentIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCounter.textContent = (currentIndex + 1) + ' / ' + galleryImgs.length;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
+    const img = galleryImgs[currentIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCounter.textContent = (currentIndex + 1) + ' / ' + galleryImgs.length;
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % galleryImgs.length;
+    const img = galleryImgs[currentIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCounter.textContent = (currentIndex + 1) + ' / ' + galleryImgs.length;
+  }
+
+  galleryImgs.forEach((img, i) => {
+    img.parentElement.addEventListener('click', function() {
+      openLightbox(i);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightboxPrev.addEventListener('click', prevImage);
+  lightboxNext.addEventListener('click', nextImage);
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+  });
+})();
+</script>
+</body>
+</html>
